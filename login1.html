@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="div1">
+        <h2 id="heading"> Registration Form </h2>
+        <form action="" id="form1" onsubmit="return myfuction()"  name="myform"> 
+
+            <label for="name"> Name : </label>
+            <input type="text" id="name" name="nm"><br>
+            <span id="sp1"></span><br>
+
+            <label for="email"> Email :</label>
+            <input type="text" name="email" id="Email"><br>
+            <span id="sp2"></span><br>
+
+            <label for="DOB"> Date Of Birth</label>
+            <input type="date" name="dob" id="DOB"><br><br>
+            <!-- <span id="sp3"></span> -->
+
+            <label for="">Gender :</label>
+            <input type="radio" name="Gender" value="Male" >Male
+            <input type="radio" name="Gender" value="Female">Female
+            <input type="radio" name="Gender" value="Not to Specify">Not to Specify <br><br>
+
+            <label for="">Mobile Number :</label>
+            <input type="text" name="mobile" id="mobno"><br>
+            <span id="sp4"></span><br>
+
+            <label for="">Institute Name :</label>
+            <input type="text" name="institute " id="institute_nm"><br>
+            <span id="sp5"></span><br>
+
+            <label for="">Year Of Passing :</label>
+            <input type="year" id="yop" ><br>
+            <span id="sp6"></span><br>
+
+            <label for="">Location :</label>
+            <input type="text" id="location" name="Location"><br>
+            <span id="sp7"></span><br>
+
+            <label for="">Create Password :</label>
+            <input type="text" id="pass"><br>
+            <span id="sp8"></span><br>
+
+            <label for="">Confirm Password :</label>
+            <input type="password" id="conpass"><br>
+            <span id="sp9"></span><br>
+
+            <label for="">Select Security Quetion :</label>
+            <select name="Dropdown" id="ddl">
+                <option value="childhood Name">childhood Name </option>
+                <option value="NickName">Nick Name </option>
+                <option value="Birth place">Birth place</option>
+                <option value="Nationality">Nationality</option>
+              </select><br><br>
+              
+              <label for="">Answer the Quetion</label>
+              <input type="text" id="atq"><br>
+              <span id="sp10"></span><br>   
+
+
+            <button id="btn" type="submit" > Submit</button>
+        </form>
+    </div>
+    <script>
+        function myfuction(){
+        var label1= document.forms["myform"]["nm"].value;
+        var label2= document.forms["myform"]["Email"].value;
+        // var label3= document.forms["myform"]["DOB"].value;
+        var label4= document.forms["myform"]["mobno"].value;
+        var label5= document.forms["myform"]["institute_nm"].value;
+        var label6= document.forms["myform"]["yop"].value;
+        var label7= document.forms["myform"]["location"].value;
+        var label8= document.forms["myform"]["pass"].value;
+        var label9= document.forms["myform"]["conpass"].value;
+        var label10= document.forms["myform"]["atq"].value;
+
+
+        if (label1 =="")
+        {
+           document.getElementById("sp1").innerHTML="**name should not be blank !!!";
+           return false;
+        }
+
+        if (label2 =="")
+        {
+           document.getElementById("sp2").innerHTML="*Email should not be blank !!!";
+           return false;
+        }
+        // if (label3 =="")
+        // {
+        //     document.getElementById("sp3").innerHTML="Date of Birth not be blank !!!";
+        // }
+        if(label4 =="")
+        {
+            document.getElementById("sp4").innerHTML="*Mobile No should not be blank !!!";
+            return false;   
+        }
+        if(label5 =="")
+        {   
+            document.getElementById("sp5").innerHTML="*Institute name should not be blank !!!";
+            return false;
+        }
+        if(label6 =="")
+        {
+            document.getElementById("sp6").innerHTML="**Year of passing should not be blank !!!";
+            return false;
+        }
+        if(label7 =="")
+        {
+            document.getElementById("sp7").innerHTML="**Location should not be blank ";
+            return false;
+        }
+        if(label8=="")
+        {
+            document.getElementById("sp8").innerHTML="PASSWORD should not be blank!!!";
+            return false;
+        }
+        if(label9=="")
+        {
+            document.getElementById("sp9").innerHTML="need to confirm the PASSWORD !!!";
+            return false;
+        }
+        if(label10=="")
+        {
+            document.getElementById("sp10").innerHTML="Need to give the answer!!!";
+            return false;
+        }
+    }
+    </script>
+   
+</body>
+</html>
